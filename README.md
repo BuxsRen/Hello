@@ -1,5 +1,9 @@
 # Hello App 服务端
 
+> 安卓客户端
+>
+> https://github.com/BuxsRen/HelloApp
+
 #### 环境与包
 | CentOS | Golang | MySQL | Nginx | Redis |  Gin  |  Gorose  |
 |:------:|:------:| :---: | :---: | :---: | :---: | :------: |
