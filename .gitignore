@@ -1,0 +1,32 @@
+./.idea/
+./.vscode/
+./_build_release/
+.env
+.DS_Store
+
+/config/app.yaml
+/tests/*.exe
+/storage/logs/*.log
+/storage/cache/*.xlsx
+/storage/cache/*.csv
+
+Hello
+Hello.exe
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.zip
+*.tar.gz
+*.rar
+*.log
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
