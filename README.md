@@ -4,6 +4,9 @@
 >
 > https://github.com/BuxsRen/HelloApp
 
+> Python 命令行版本
+>
+> https://github.com/BuxsRen/HelloAppCli
 #### 环境与包
 | CentOS | Golang | MySQL | Nginx | Redis |  Gin  |  Gorose  |
 |:------:|:------:| :---: | :---: | :---: | :---: | :------: |
