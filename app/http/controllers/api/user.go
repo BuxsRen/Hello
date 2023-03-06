@@ -35,6 +35,7 @@ func (this *UserController) Login(c *gin.Context) interface{} {
 	delete(user, "delete_at")
 	delete(user, "update_at")
 	delete(user, "is_ban")
+	delete(user, "password")
 	return utils.OK("登录成功", user)
 }
 

@@ -44,16 +44,21 @@ func Run(wg *sync.WaitGroup) {
 		message := d[:n]
 		data := make(map[string]interface{})
 		e := json.Unmarshal(message, &data)
-		if e != nil || data["type"] == nil || data["token"] == nil || fmt.Sprintf("%T", data["token"]) != "string" { // 非json数据不处理
-			continue
-		}
-		token := data["token"].(string)
-		info := encry.DecryptToken(token)
-		if info == nil {
+		if e != nil || data["type"] == nil { // 非json数据不处理
 			continue
 		}
 
 		if data["type"].(string) == "login" { // 登录
+			if data["token"] == nil || fmt.Sprintf("%T", data["token"]) != "string" {
+				return
+			}
+
+			token := data["token"].(string)
+			info := encry.DecryptToken(token)
+			if info == nil {
+				continue
+			}
+
 			List.Store(info["id"].(float64), addr)
 			err := send(server, buildMsg(info["id"], "login", nil), addr)
 			if err != nil {
